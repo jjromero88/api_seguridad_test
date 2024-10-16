@@ -10,5 +10,6 @@ namespace API.SEG.Aplicacion.Interface.Features
     {
         string? Encrypt(string? value);
         string? Decrypt(string? value);
+        string? DecryptArray(string? value);
     }
 }

@@ -13,5 +13,9 @@ namespace API.SEG.Infraestructure.Services
         {
             return string.IsNullOrEmpty(value) ? null : CShrapEncryption.DecryptString(value, passPhrase);
         }
+        public string? DecryptArray(string? values, string passPhrase)
+        {
+            return string.IsNullOrEmpty(values) ? null : CShrapEncryption.DecryptArray(values, passPhrase);
+        }
     }
 }

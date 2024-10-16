@@ -21,6 +21,13 @@ namespace API.SEG.Aplicacion.Features.Services
                     _encryptionService.DecryptString(value, _sessionService.UsuarioCache.authkey);
         }
 
+        public string? DecryptArray(string? value)
+        {
+            return string.IsNullOrEmpty(value) ? null :
+                    string.IsNullOrEmpty(_sessionService.UsuarioCache.authkey) ? null :
+                    _encryptionService.DecryptArray(value, _sessionService.UsuarioCache.authkey);
+        }
+
         public string? Encrypt(string? value)
         {
             return  string.IsNullOrEmpty(value) ? null :
