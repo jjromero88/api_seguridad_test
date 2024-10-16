@@ -16,14 +16,16 @@ namespace API.SEG.Aplicacion.Features.Services
 
         public string? Decrypt(string? value)
         {
-            return string.IsNullOrEmpty(_sessionService.UsuarioCache.authkey) ? null : 
-                _encryptionService.DecryptString(value, _sessionService.UsuarioCache.authkey);
+            return  string.IsNullOrEmpty(value) ? null :
+                    string.IsNullOrEmpty(_sessionService.UsuarioCache.authkey) ? null : 
+                    _encryptionService.DecryptString(value, _sessionService.UsuarioCache.authkey);
         }
 
         public string? Encrypt(string? value)
         {
-            return string.IsNullOrEmpty(_sessionService.UsuarioCache.authkey) ? null : 
-                _encryptionService.EncryptString(value, _sessionService.UsuarioCache.authkey);
+            return  string.IsNullOrEmpty(value) ? null :
+                    string.IsNullOrEmpty(_sessionService.UsuarioCache.authkey) ? null : 
+                    _encryptionService.EncryptString(value, _sessionService.UsuarioCache.authkey);
         }
     }
 }
