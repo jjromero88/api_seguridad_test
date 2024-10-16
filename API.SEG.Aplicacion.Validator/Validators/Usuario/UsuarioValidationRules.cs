@@ -17,8 +17,8 @@ namespace API.SEG.Aplicacion.Validator
         public UsuarioInsertRequestValidator()
         {
             RuleFor(u => u.perfileskey)
-            .IsNullOrWhiteSpace()
-            .WithMessage("Debe seleccionar por lo menos un Perfil");
+            .NotEmpty()
+            .WithMessage("Debe ingresar por lo menos un perfil");
 
             RuleFor(u => u.username)
             .IsNullOrWhiteSpace()
@@ -70,8 +70,8 @@ namespace API.SEG.Aplicacion.Validator
             .WithMessage("Debe ingresar el Id del Usuario");
 
             RuleFor(u => u.perfileskey)
-            .IsNullOrWhiteSpace()
-            .WithMessage("Debe seleccionar por lo menos un Perfil");
+            .NotEmpty()
+            .WithMessage("Debe ingresar por lo menos un perfil");
 
             RuleFor(u => u.username)
             .IsNullOrWhiteSpace()

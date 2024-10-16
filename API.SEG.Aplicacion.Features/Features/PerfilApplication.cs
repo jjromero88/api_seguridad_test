@@ -31,6 +31,16 @@ namespace API.SEG.Aplicacion.Features
             _logger = logger;
         }
 
+        public Task<SegResponse> Insert(Request<PerfilDto> request)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<SegResponse> Update(Request<PerfilDto> request)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<SegResponse> Delete(Request<PerfilDto> request)
         {
             throw new NotImplementedException();
@@ -90,16 +100,6 @@ namespace API.SEG.Aplicacion.Features
                 _logger.LogError(ex.Message);
                 return ResponseUtil.InternalError(message: ex.Message);
             }
-        }
-
-        public Task<SegResponse> Insert(Request<PerfilDto> request)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<SegResponse> Update(Request<PerfilDto> request)
-        {
-            throw new NotImplementedException();
         }
     }
 }

@@ -1,13 +1,12 @@
-﻿using API.SEG.Aplicacion.Dto;
-using API.SEG.Aplicacion.Features;
+﻿using AutoMapper;
+using System.Net;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using API.SEG.Aplicacion.Dto;
 using API.SEG.Aplicacion.Interface.Features;
 using API.SEG.Transversal.Common.Generics;
 using API.SEG.Transversal.Common;
-using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using SEG.WebApi.Filters;
-using System.Net;
 
 namespace SEG.WebApi.Controllers
 {

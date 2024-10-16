@@ -50,8 +50,11 @@ namespace API.SEG.Aplicacion.Features
                 // mapeamos la entidad de request
                 var entidad = _mapper.Map<Usuario>(request.entidad);
 
+                // convertimos en cadena separada por ',' al array de perfiles
+                string perfileskey = request.entidad?.perfileskey?.Length > 0 ? string.Join(",", request.entidad.perfileskey) : string.Empty;
+
                 // desencriptamos los id de perfiles
-                entidad.perfiles_id = _dataEncryptionService.DecryptArray(request.entidad.perfileskey);
+                entidad.perfiles_id = _dataEncryptionService.DecryptArray(perfileskey);
 
                 // encriptamos la contraseña
                 entidad.password = string.IsNullOrEmpty(request.entidad.password) ? null : EncriptacionHelper.Encrypt(request.entidad.password?.Trim());
@@ -90,8 +93,11 @@ namespace API.SEG.Aplicacion.Features
                 // mapeamos la entidad de request
                 var entidad = _mapper.Map<Usuario>(request.entidad);
 
+                // convertimos en cadena separada por ',' al array de perfiles
+                string perfileskey = request.entidad?.perfileskey?.Length > 0 ? string.Join(",", request.entidad.perfileskey) : string.Empty;
+
                 // desencriptamos los id de perfiles
-                entidad.perfiles_id = _dataEncryptionService.DecryptArray(request.entidad.perfileskey);
+                entidad.perfiles_id = _dataEncryptionService.DecryptArray(perfileskey);
 
                 // desencriptamos el id del usuario
                 entidad.usuario_id = Convert.ToInt32(_dataEncryptionService.Decrypt(request.entidad.serialkey));
