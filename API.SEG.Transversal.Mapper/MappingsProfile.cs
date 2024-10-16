@@ -57,6 +57,26 @@ namespace API.SEG.Transversal.Mapper
 
             #endregion
 
+            #region Perfil
+
+            CreateMap<Perfil, PerfilDto>().ReverseMap()
+                .ForMember(destination => destination.serialkey, source => source.MapFrom(src => src.serialkey))
+                .ForMember(destination => destination.codigo, source => source.MapFrom(src => src.codigo))
+                .ForMember(destination => destination.abreviatura, source => source.MapFrom(src => src.abreviatura))
+                .ForMember(destination => destination.descripcion, source => source.MapFrom(src => src.descripcion));
+
+            CreateMap<PerfilDto, PerfilFilterRequest>().ReverseMap()
+                .ForMember(destination => destination.serialkey, source => source.MapFrom(src => src.serialkey))
+                .ForMember(destination => destination.filtro, source => source.MapFrom(src => src.filtro));
+
+            CreateMap<PerfilDto, PerfilResponse>().ReverseMap()
+                .ForMember(destination => destination.serialkey, source => source.MapFrom(src => src.serialkey))
+                .ForMember(destination => destination.codigo, source => source.MapFrom(src => src.codigo))
+                .ForMember(destination => destination.abreviatura, source => source.MapFrom(src => src.abreviatura))
+                .ForMember(destination => destination.descripcion, source => source.MapFrom(src => src.descripcion));
+
+            #endregion
+
             #region Authenticate
 
             CreateMap<AuthenticateDto, LoginRequest>().ReverseMap()

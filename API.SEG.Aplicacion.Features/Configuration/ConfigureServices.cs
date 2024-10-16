@@ -11,6 +11,7 @@ namespace API.SEG.Aplicacion.Features
             services.AddScoped<IAuthenticateApplication, AuthenticateApplication>();
             services.AddScoped<IUsuarioApplication, UsuarioApplication>();
             services.AddScoped<ISecurityApplication, SecurityApplication>();
+            services.AddScoped<IPerfilApplication, PerfilApplication>();
             services.AddScoped<ISessionService, SessionService>();
             services.AddScoped<IDataEncryptionService, DataEncryptionService>();
 
