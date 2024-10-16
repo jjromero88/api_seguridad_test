@@ -33,6 +33,7 @@ namespace API.SEG.Persistence.Repository
                     parameters.Add("numdocumento", entidad.numdocumento);
                     parameters.Add("nombrecompleto", entidad.nombrecompleto);
                     parameters.Add("email", entidad.email);
+                    parameters.Add("perfiles", entidad.perfiles_id);
                     parameters.Add("usuario_reg", entidad.usuario_reg);
                     parameters.Add("error", dbType: DbType.Boolean, direction: ParameterDirection.Output);
                     parameters.Add("message", dbType: DbType.String, direction: ParameterDirection.Output, size: 500);
@@ -70,6 +71,7 @@ namespace API.SEG.Persistence.Repository
                     parameters.Add("nombrecompleto", entidad.nombrecompleto);
                     parameters.Add("email", entidad.email);
                     parameters.Add("habilitado", entidad.habilitado);
+                    parameters.Add("perfiles", entidad.perfiles_id);
                     parameters.Add("usuario_act", entidad.usuario_act);
                     parameters.Add("error", dbType: DbType.Boolean, direction: ParameterDirection.Output);
                     parameters.Add("message", dbType: DbType.String, direction: ParameterDirection.Output, size: 500);

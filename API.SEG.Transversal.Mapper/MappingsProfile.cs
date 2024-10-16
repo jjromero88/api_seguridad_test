@@ -12,6 +12,7 @@ namespace API.SEG.Transversal.Mapper
 
             CreateMap<Usuario, UsuarioDto>().ReverseMap()
             .ForMember(destination => destination.serialkey, source => source.MapFrom(src => src.serialkey))
+            .ForMember(destination => destination.perfileskey, source => source.MapFrom(src => src.perfileskey))
             .ForMember(destination => destination.username, source => source.MapFrom(src => src.username))
             .ForMember(destination => destination.password, source => source.MapFrom(src => src.password))
             .ForMember(destination => destination.numdocumento, source => source.MapFrom(src => src.numdocumento))
@@ -23,6 +24,7 @@ namespace API.SEG.Transversal.Mapper
             .ForMember(destination => destination.serialkey, source => source.MapFrom(src => src.serialkey));
 
             CreateMap<UsuarioDto, UsuarioInsertRequest>().ReverseMap()
+            .ForMember(destination => destination.perfileskey, source => source.MapFrom(src => src.perfileskey))
             .ForMember(destination => destination.username, source => source.MapFrom(src => src.username))
             .ForMember(destination => destination.password, source => source.MapFrom(src => src.password))
             .ForMember(destination => destination.numdocumento, source => source.MapFrom(src => src.numdocumento))
@@ -30,6 +32,7 @@ namespace API.SEG.Transversal.Mapper
             .ForMember(destination => destination.email, source => source.MapFrom(src => src.email));
 
             CreateMap<UsuarioDto, UsuarioUpdateRequest>().ReverseMap()
+            .ForMember(destination => destination.perfileskey, source => source.MapFrom(src => src.perfileskey))
             .ForMember(destination => destination.serialkey, source => source.MapFrom(src => src.serialkey))
             .ForMember(destination => destination.username, source => source.MapFrom(src => src.username))
             .ForMember(destination => destination.password, source => source.MapFrom(src => src.password))

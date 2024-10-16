@@ -14,6 +14,7 @@ namespace API.SEG.Aplicacion.Dto
         public string? nombrecompleto { get; set; }
         public string? email { get; set; }
         public bool? habilitado { get; set; }
+        public string? perfileskey { get; set; }
     }
     public class UsuarioIdRequest
     {
@@ -26,6 +27,7 @@ namespace API.SEG.Aplicacion.Dto
         public string? numdocumento { get; set; }
         public string? nombrecompleto { get; set; }
         public string? email { get; set; }
+        public string? perfileskey { get; set; }
     }
     public class UsuarioUpdateRequest
     {
@@ -36,6 +38,7 @@ namespace API.SEG.Aplicacion.Dto
         public string? nombrecompleto { get; set; }
         public string? email { get; set; }
         public bool? habilitado { get; set; }
+        public string? perfileskey { get; set; }
     }
     public class UsuarioFilterRequest
     {
