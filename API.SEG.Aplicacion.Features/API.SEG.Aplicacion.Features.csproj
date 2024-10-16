@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\API.SEG.Aplicacion.Dto\API.SEG.Aplicacion.Dto.csproj" />
+    <ProjectReference Include="..\API.SEG.Aplicacion.Interface\API.SEG.Aplicacion.Interface.csproj" />
+    <ProjectReference Include="..\API.SEG.Aplicacion.Validator\API.SEG.Aplicacion.Validator.csproj" />
+    <ProjectReference Include="..\API.SEG.Domain\API.SEG.Domain.csproj" />
+    <ProjectReference Include="..\API.SEG.Transversal.Common\API.SEG.Transversal.Common.csproj" />
+    <ProjectReference Include="..\API.SEG.Transversal.Util\API.SEG.Transversal.Util.csproj" />
+  </ItemGroup>
+
+</Project>

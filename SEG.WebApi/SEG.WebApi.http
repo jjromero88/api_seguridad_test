@@ -1,0 +1,6 @@
+@SEG.WebApi_HostAddress = http://localhost:5091
+
+GET {{SEG.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
