@@ -9,5 +9,9 @@ namespace API.SEG.Infraestructure.Services
         {
             return string.IsNullOrEmpty(value) ? null : CShrapEncryption.EncryptString(value, passPhrase);
         }
+        public string? DecryptString(string? value, string passPhrase)
+        {
+            return string.IsNullOrEmpty(value) ? null : CShrapEncryption.DecryptString(value, passPhrase);
+        }
     }
 }

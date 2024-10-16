@@ -10,8 +10,9 @@ namespace API.SEG.Aplicacion.Features
         {
             services.AddScoped<IAuthenticateApplication, AuthenticateApplication>();
             services.AddScoped<IUsuarioApplication, UsuarioApplication>();
-            services.AddScoped<ISessionService, SessionService>();
             services.AddScoped<ISecurityApplication, SecurityApplication>();
+            services.AddScoped<ISessionService, SessionService>();
+            services.AddScoped<IDataEncryptionService, DataEncryptionService>();
 
             return services;
         }

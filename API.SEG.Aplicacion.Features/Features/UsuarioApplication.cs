@@ -12,17 +12,20 @@ namespace API.SEG.Aplicacion.Features
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+        private readonly ISessionService _sessionService;
         private readonly IAppLogger<UsuarioApplication> _logger;
         private readonly UsuarioValidationManager _usuarioValidationManager;
 
         public UsuarioApplication(
             IUnitOfWork unitOfWork, 
             IMapper mapper, 
+            ISessionService sessionService, 
             IAppLogger<UsuarioApplication> logger, 
             UsuarioValidationManager usuarioValidationManager)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _sessionService = sessionService;
             _logger = logger;
             _usuarioValidationManager = usuarioValidationManager;
         }
